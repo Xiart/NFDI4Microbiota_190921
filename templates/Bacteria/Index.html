@@ -9,7 +9,6 @@
 <body>
     <h1>Bacteria List</h1>
     <a href="/bacteria/ABacteria">New Bacteria</a>
-
     <p>Total Records : {{ results|length }}</p>
     <table>
         <thead>
@@ -22,8 +21,7 @@
             <tr>
                 <td>{{ results[x][1] }}</td>
             </tr>
-            {% endfor %}
-           
+            {% endfor %}           
         </tbody>
     </table>
 </body>
