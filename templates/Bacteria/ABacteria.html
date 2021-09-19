@@ -1,24 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABacteria</title>
-</head>
-<body>
+{% extends "Layout.html" %}
+
+{% block main %}
+<div class="container">
     <h1>Create New Bacteria</h1>
-    <a href="bacteria">Back to List</a>
-
+    <a href="/bacteria">Back to List</a>
+   
     <form method="POST" action="/bacteria/Save">
-        <div>
-            <label>Bacteria Name : </label>
-            <input name="bactname" type="text"placeholder="Input the Name of Bacteria" />
+        <fieldset>
+        <legend>Bacteria Details</legend>
+        <div class="row">
+            <label class="col-sm-2 col-md-2 col-lg-2">Bacteria Name : </label>
+            <input class="col-sm-4 col-md-4 col-lg-4" name="bactname" type="text"placeholder="Input the Name of Bacteria">
         </div>
-        <div>
-            <input type="submit" value="Submit" />
+        <div class="row">
+            <input class="btn btn-success col-sm-2 col-lg-2 col-md-2" type="submit" value="Submit">
         </div>
+    </fieldset>
+    </form>
+</div>
 
-    </form>>
-</body>
-</html>
+{% endblock %}

@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bacteria List</title>
-</head>
-<body>
+{% extends "Layout.html" %}
+{% block main %}
+<div class="container">
     <h1>Bacteria List</h1>
-    <a href="/bacteria/ABacteria">New Bacteria</a>
+    <a class="btn btn-primary" href="/bacteria/ABacteria">New Bacteria</a>
     <p>Total Records : {{ results|length }}</p>
-    <table>
+    <table id="BacteriaTable" class="display">
         <thead>
             <tr>
                 <th>Bacteria Name</th>
@@ -24,5 +18,13 @@
             {% endfor %}           
         </tbody>
     </table>
-</body>
-</html>
+</div>
+
+
+
+{% endblock %}
+{% block script%}
+<script>
+    $('#BacteriaTable').DataTable();
+    </script>
+{% endblock %}
