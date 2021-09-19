@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bacteria List</title>
+</head>
+<body>
+    <h1>Bacteria List</h1>
+    <a href="/bacteria/ABacteria">New Bacteria</a>
+
+    <p>Total Records : {{ results|length }}</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Bacteria Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for x in range(0,results|length) %}
+            <tr>
+                <td>{{ results[x][1] }}</td>
+            </tr>
+            {% endfor %}
+           
+        </tbody>
+    </table>
+</body>
+</html>
